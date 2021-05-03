@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visualization</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <div id='container'>
+        <div id='header'>
+            <div id="headertext">
+                <h1>Netflix/IMDb Movie Metadata Analysis </h1>
+                <h2>Movie Recommendations and Analysis of Moview Reviews</h2>
+            </div>
+            <div id='navigation'>
+                <ul id='navi'>
+                    <li ><a href="Overview.html"><b>Overview</b></a></li>
+                    <li class='selected'><a href="EDA.html"><b>EDA</b></a></li>
+                    <li ><a href="topic.html"><b>Movie Recommendations</b></a></li>
+                    <li><a href="sentiment.html"><b>Sentiment Reviews</b></a></li>
+                </ul>
+            </div>
+        </div> 
+        <div id='content'>   
+            <div class='author'>
+                <h3>Author</h3>
+                <h4>Ruijin Jia</h4>
+                <h5><a href="mailto:rjia58@gwu.edu">rjia58@gwu.edu</a></h5>
+                <h5>Instructor: Nima Zahadat</h5>
+                <h3>Data Source</h3>
+                <ul>
+                    <li><a class="selected" href="https://www.kaggle.com/shivamb/netflix-shows">Netflix and TV Shows</a></li>
+                    <li><a class="selected" href="https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset">IMDb Personalities</a></li>
+                    <li><a class="selected" href="https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews">IMDb 50K Reviews</a></li>
+                </ul>
+            </div>
+            <div id='chart'>
+                <h1>Sentiment Reviews and Prediction
+                    <p> 
+                        In this part, I will predict the review to be positive or negative using three deep learning methods: LSTM, SVM, and BERT, and then compare the accuracy of different models.   
+                    </p>
+                    <img src="image/img21.png" height=200px, width=500px>  
+                    <img src="image/img22.png" height=200px, width=500px>  
+                    <img src="image/img23.png" height=400px, width=500px>  
+                </h1>
+                <h1>Method 1: LSTM
+                    <p>Bi-Directional LSTM will be applied. </p>
+                    <img src="image/img49.png" height=400px, width=500px>  
+                    <p >A = [come, hell, or, high, water]<br>Tokenized, then M= [1,2,3,4,5]<br>M_reversed= [5,4,3,2,1]<br>M + M_reversed [1,2,3,4,5,5,4,3,2,1]</p>
+                </h1>
+                <h2>Model Structure</h2>
+                    <img src="image/img24.png" height=400px, width=650px>
+                <h2>LSTM Training and validation accuracy</h2>
+                    <img src="image/img25.png" height=400px, width=650px>
+                    <img src="image/img26.png" height=400px, width=650px>
+                <h2>LSTM Confusion Matrix</h2>
+                    <img src="image/img27.png" height=400px, width=650px>
+                <h1>Method 2: SVM</h1>
+                    <img src="image/img50.png" height=400px, width=650px>
+                    <img src="image/img28.png" height=100px, width=400px>  
+                <p></p>
+                <h2>SVM Confusion Matrix</h2>
+                    <img src="image/img29.png" height=400px, width=400px>
+
+                <h1>Method 3: BERT</h1>
+                <h2>BERT Model</h2>
+                    <img src="image/img51.png" height=400px, width=650px>
+                    <br>
+                    <img src="image/img52.png" height=400px, width=650px>
+                <h2>Model Structure</h2>
+                    <img src="image/img30.png" height=400px, width=650px>
+                <h2>BERT Training and validation accuracy</h2>
+                    <img src="image/img31.png" height=400px, width=650px>
+                    <img src="image/img32.png" height=400px, width=650px>
+                <h2>BERT Confusion Matrix</h2>
+                    <img src="image/img33.png" height=400px, width=650px>
+                <h1>Model Selection
+                <h2>
+                <img src="image/img53.png" height=200px, width=500px>
+                </h2>
+                </h1>
+                <h1>
+                <p>Compared the accuracy, precision, recall, and F1 with three models, BERT is the best one</p>
+                </h1>
+                <h1>
+                Input
+                <img src="image/img54.png" height=200px, width=650px>
+                <p>
+                    Return results: 0.999767, positive
+                </p>
+                </h1>
+                
+            </div>
+        <div class="footer">
+            Copyright &copy 2021
+        </div>
+        </div>
+    </div>
+
+    
